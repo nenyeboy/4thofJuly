@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>4th of July Parade</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Animate.css and Hover.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css"/>
+</head>
+<body>
+  <div class="scene">
+
+    <!-- Toggle Button -->
+    <div class="toggle">
+      <label>
+        <input type="checkbox" id="modeToggle" />
+        <span class="slider"></span>
+        <span class="label-text">Toggle Sky</span>
+      </label>
+    </div>
+
+    <!-- Sky -->
+    <div class="sky">
+      <div class="firework" id="firework1"></div>
+      <div class="firework" id="firework2"></div>
+    </div>
+
+    <!-- Lawn and Crowd -->
+    <div class="lawn">
+      <div class="family">
+        <img src="bbq.png" alt="BBQ" class="bbq" />
+        <img src="balloon.png" alt="Balloon" class="balloon animate__animated" />
+      </div>
+    </div>
+
+    <!-- Road and Parade -->
+    <div class="road">
+      <img src="road_transparent.png" alt="Road" class="road-img" />
+      <div class="parade">
+        <img src="uncle_sam_transparent.png" alt="Uncle Sam" class="float hover-effect" />
+        <img src="flag.png" alt="Flag" class="flag" onclick="playAnthem()" />
+      </div>
+    </div>
+
+  </div>
+
+  <audio id="anthem">
+    <source src="national_anthem.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    const toggle = document.getElementById('modeToggle');
+    const sky = document.querySelector('.sky');
+
+    toggle.addEventListener('change', () => {
+      sky.classList.toggle('night');
+    });
+
+    function playAnthem() {
+      document.getElementById('anthem').play();
+    }
+  </script>
+</body>
+</html>

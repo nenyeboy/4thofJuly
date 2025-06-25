@@ -1,0 +1,114 @@
+:root {
+  --sky-light: #a3d5ff;
+  --sky-dark: #001f3f;
+  --grass: #3cb043;
+  --road: #333;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.scene {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.sky {
+  background-color: var(--sky-light);
+  width: 100%;
+  height: 200px;
+  position: relative;
+  transition: background 1s ease-in-out;
+}
+
+.sky.night {
+  background-color: var(--sky-dark);
+}
+
+.firework {
+  width: 10px;
+  height: 10px;
+  background: red;
+  position: absolute;
+  animation: explode 2s infinite;
+  opacity: 0;
+}
+
+#firework1 { top: 50px; left: 40%; }
+#firework2 { top: 30px; left: 60%; }
+
+@keyframes explode {
+  0% { transform: scale(0); opacity: 0; }
+  50% { transform: scale(2); opacity: 1; }
+  100% { transform: scale(0); opacity: 0; }
+}
+
+.lawn {
+  background-color: var(--grass);
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.balloon {
+  width: 40px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+.road {
+  width: 100%;
+  background-color: var(--road);
+  padding: 20px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.road-img {
+  width: 100%;
+  max-height: 80px;
+  object-fit: cover;
+}
+
+.parade {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  margin-top: -60px;
+}
+
+.float {
+  height: 100px;
+  transition: transform 0.3s ease;
+}
+
+.hover-effect:hover {
+  transform: scale(1.1) rotate(-2deg);
+}
+
+.flag {
+  height: 60px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.flag:hover {
+  transform: rotate(5deg);
+}
+
+.toggle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
