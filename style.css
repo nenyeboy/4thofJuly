@@ -29,6 +29,24 @@ body {
   background-color: var(--sky-dark);
 }
 
+.planes {
+  width: 100px;
+  height: 100px;
+  margin: center;  
+}
+
+.eagle {
+  width: 50px;
+  height: 50px;
+  margin: center; 
+}
+
+.clouds {
+  width: 100px;
+  height: 100px;
+  margin: center; 
+}
+
 .firework {
   width: 10px;
   height: 10px;
@@ -38,7 +56,7 @@ body {
   opacity: 0;
 }
 
-#firework1 { top: 50px; left: 40%; }
+#firework1 { top: 50px;  left: 40%; }
 #firework2 { top: 30px; left: 60%; }
 
 @keyframes explode {
