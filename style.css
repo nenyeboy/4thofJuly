@@ -32,19 +32,25 @@ body {
 .planes {
   width: 100px;
   height: 100px;
-  margin: center;  
+  margin: center;
+  position: relative;
 }
 
 .eagle {
   width: 50px;
   height: 50px;
-  margin: center; 
+  margin: left; 
+  top: 20px;
+  position: relative;
+  
 }
 
 .clouds {
   width: 100px;
   height: 100px;
-  margin: center; 
+  margin: right;
+  top: 20px;
+  position: relative;
 }
 
 .firework {
